@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Netflix</title>
-    <!-- <style>
-        * {
+ * {
             margin: 0;
             padding: 0;
         }
 
         body {
-            background-image: url(img/inicio.png)
+            background-image: url(../img/inicio.png)
            
         }
 
@@ -41,21 +32,3 @@
             text-decoration: none;
             font-family: sans-serif;
         }
-    </style> -->
-
-</head>
-
-<body>
-    <header id="heading">
-        <div>
-            <h1 class="h1">
-                <a href="#">Netflix</a>
-            </h1>
-            <h2 class="h1">
-                <a href="#">Netflix</a>
-            </h2>
-        </div>
-    </header>
-</body>
-
-</html>

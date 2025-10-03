@@ -1,4 +1,4 @@
-"# Clone da Tela de Cadastro da Netflix (HTML/CSS)
+# Clone da Tela de Cadastro da Netflix (HTML/CSS)
 
 ## 📖 Descrição
 

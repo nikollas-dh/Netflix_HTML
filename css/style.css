@@ -4,14 +4,32 @@
         }
 
         body {
-            background-image: url(../img/inicio.png)
-           
+            /* background-image: url(../img/inicio.png) */
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/d482944d-eab4-4a64-89c9-a07a508a6e42/web/BR-pt-20250929-TRIFECTA-perspective_f86e1617-a2fa-4e69-9251-41c164062b2e_large.jpg);
+            background-size: cover;
+            background-position: top center;
         }
 
         #heading {
-            /* background-color: red; */
+            background: rgba(0, 0, 0, 0.7) ;
         }
-
+        .btnEntrar {
+            font-family: 'Arial', sans-serif; 
+            font-size: 14px;                   
+            font-weight: bold;                 /* deixa o texto em negrito */
+            color: white;                      
+            background-color: #e50914;         
+            padding: 12px 20px;                
+            border: none;                      
+            border-radius: 5px;                /* cantos arredondados */
+            cursor: pointer;                   /* muda cursor ao passar */
+            transition: all 0.3s ease;         /* efeito suave ao hover */
+            text-transform: uppercase;         
+        }
+        .btnEntrar:hover {
+            background-color: #b00710;         
+            transform: scale(1.05);            /* leve aumento ao passar */
+        }
         #heading div {
             width: 90%;
             display: flex;
@@ -31,4 +49,10 @@
             color: red;
             text-decoration: none;
             font-family: sans-serif;
+        }
+        label{        
+            color: white;
+            display: flex;
+            justify-content: center;
+            margin: 0;
         }

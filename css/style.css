@@ -5,9 +5,10 @@
 
         body {
             /* background-image: url(../img/inicio.png) */
-            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/d482944d-eab4-4a64-89c9-a07a508a6e42/web/BR-pt-20250929-TRIFECTA-perspective_f86e1617-a2fa-4e69-9251-41c164062b2e_large.jpg);
-            background-size: cover;
-            background-position: top center;
+            background-color: black;
+            /* background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/d482944d-eab4-4a64-89c9-a07a508a6e42/web/BR-pt-20250929-TRIFECTA-perspective_f86e1617-a2fa-4e69-9251-41c164062b2e_large.jpg); */
+            /* background-size: cover;
+            background-position: top center; */
         }
 
         #heading {

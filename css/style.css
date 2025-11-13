@@ -1,59 +1,179 @@
- * {
-            margin: 0;
-            padding: 0;
-        }
+/* --------------------------------------------- */
+/*                RESET GERAL                    */
+/* --------------------------------------------- */
 
-        body {
-            /* background-image: url(../img/inicio.png) */
-            background-color: black;
-            /* background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/d482944d-eab4-4a64-89c9-a07a508a6e42/web/BR-pt-20250929-TRIFECTA-perspective_f86e1617-a2fa-4e69-9251-41c164062b2e_large.jpg); */
-            /* background-size: cover;
-            background-position: top center; */
-        }
+/* Remove margens e espaçamentos padrão, 
+   e faz com que padding e bordas não aumentem o tamanho total dos elementos */
+* {
+    margin: 0;              /* Remove margens padrão */
+    padding: 0;             /* Remove espaçamento interno padrão */
+    box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura total */
+}
 
-        #heading {
-            background: rgba(0, 0, 0, 0.7) ;
-        }
-        .btnEntrar {
-            font-family: 'Arial', sans-serif; 
-            font-size: 14px;                   
-            font-weight: bold;                 /* deixa o texto em negrito */
-            color: white;                      
-            background-color: #e50914;         
-            padding: 12px 20px;                
-            border: none;                      
-            border-radius: 5px;                /* cantos arredondados */
-            cursor: pointer;                   /* muda cursor ao passar */
-            transition: all 0.3s ease;         /* efeito suave ao hover */
-            text-transform: uppercase;         
-        }
-        .btnEntrar:hover {
-            background-color: #b00710;         
-            transform: scale(1.05);            /* leve aumento ao passar */
-        }
-        #heading div {
-            width: 90%;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-        }
+/* --------------------------------------------- */
+/*                  FUNDO                        */
+/* --------------------------------------------- */
 
-        #heading .h1 {
-            /* padding-top: 15px;
-            padding-left: 15px; */
-            padding: 15px 0;
-            font-size: 20px;
-            text-transform: uppercase;
-        }
+body {
+    background-color: black; /* Cor de fundo preta (caso a imagem não carregue) */
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/d482944d-eab4-4a64-89c9-a07a508a6e42/web/BR-pt-20250929-TRIFECTA-perspective_f86e1617-a2fa-4e69-9251-41c164062b2e_large.jpg"); 
+    background-size: cover;   /* Faz a imagem preencher toda a tela */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Impede a repetição da imagem */
+    font-family: 'Arial', sans-serif; /* Define a fonte padrão */
+    min-height: 100vh; /* Faz o corpo ocupar 100% da altura da tela */
+}
 
-        #heading a {
-            color: red;
-            text-decoration: none;
-            font-family: sans-serif;
-        }
-        label{        
-            color: white;
-            display: flex;
-            justify-content: center;
-            margin: 0;
-        }
+/* --------------------------------------------- */
+/*                 CABEÇALHO                     */
+/* --------------------------------------------- */
+
+#heading {
+    background: rgba(0, 0, 0, 0.7); /* Fundo preto com 70% de opacidade */
+    width: 100%;                    /* Ocupa toda a largura da tela */
+}
+
+#heading div {
+    width: 90%;               /* Largura do conteúdo dentro do cabeçalho */
+    max-width: 1200px;        /* Limite máximo para telas grandes */
+    margin: 0 auto;           /* Centraliza horizontalmente */
+    display: flex;            /* Usa flexbox para organizar os elementos */
+    justify-content: space-between; /* Deixa um elemento na esquerda e outro na direita */
+    align-items: center;      /* Centraliza verticalmente os itens */
+    padding: 15px 0;          /* Espaço acima e abaixo */
+    flex-wrap: nowrap;        /* Impede que os itens quebrem para a próxima linha */
+}
+
+#heading .h1 {
+    font-size: 1.4rem;        /* Tamanho do texto do título */
+    text-transform: uppercase;/* Deixa o texto em maiúsculas */
+    color: white;             /* Cor do texto branca */
+}
+
+#heading a {
+    color: #e50914;           /* Cor vermelha (Netflix) */
+    text-decoration: none;    /* Remove o sublinhado dos links */
+    font-weight: bold;        /* Deixa o texto em negrito */
+}
+
+/* --------------------------------------------- */
+/*                    BOTÃO                      */
+/* --------------------------------------------- */
+
+.btnEntrar {
+    width: 10vw;              /* Largura proporcional à tela (18% da viewport width) */
+    height: 5vh;              /* Altura proporcional à tela (5% da viewport height) */
+    max-width: 130px;         /* Limite máximo de largura */
+    min-width: 90px;         /* Limite mínimo de largura */
+    display: flex;            /* Usa flexbox para centralizar o texto */
+    justify-content: center;  /* Centraliza horizontalmente o texto */
+    align-items: center;      /* Centraliza verticalmente o texto */
+    font-size: 0.9rem;        /* Tamanho da fonte */
+    font-weight: bold;        /* Deixa o texto em negrito */
+    color: white;             /* Cor do texto branca */
+    background-color: #e50914;/* Fundo vermelho Netflix */
+    padding: 10px 16px;       /* Espaçamento interno do botão */
+    border: none;             /* Remove bordas */
+    border-radius: 5px;       /* Arredonda os cantos */
+    cursor: pointer;          /* Muda o cursor ao passar o mouse */
+    transition: all 0.3s ease;/* Anima suavemente as mudanças */
+    text-transform: uppercase;/* Transforma o texto em maiúsculas */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.btnEntrar:hover {
+    background-color: #b00710; /* Vermelho mais escuro */
+    transform: scale(1.05);    /* Aumenta 5% o tamanho do botão */
+}
+
+/* --------------------------------------------- */
+/*               SEÇÃO CENTRAL                   */
+/* --------------------------------------------- */
+
+section {
+    display: flex;                 /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center;       /* Centraliza horizontalmente */
+    align-items: center;           /* Centraliza verticalmente */
+    height: calc(100vh - 70px);    /* Altura da tela menos o cabeçalho */
+    padding: 20px;                 /* Espaçamento interno */
+    text-align: center;            /* Centraliza textos dentro da seção */
+}
+
+/* --------------------------------------------- */
+/*             LABEL CENTRALIZADO                */
+/* --------------------------------------------- */
+
+label {
+    background-color: #b00710;     /* Fundo vermelho escuro */
+    color: white;                  /* Texto branco */
+    display: flex;                 /* Flexbox para alinhar o texto */
+    justify-content: center;       /* Centraliza horizontalmente */
+    align-items: center;           /* Centraliza verticalmente */
+    padding: 12px 24px;            /* Espaçamento interno */
+    border-radius: 6px;            /* Bordas arredondadas */
+    font-size: 1rem;               /* Tamanho da fonte */
+}
+
+/* --------------------------------------------- */
+/*                RESPONSIVIDADE                 */
+/* --------------------------------------------- */
+
+/* ----------- Tablets (até 1024px) ------------ */
+@media (max-width: 1024px) {
+
+    #heading .h1 {
+        font-size: 1.2rem;         /* Reduz tamanho do título */
+    }
+
+    .btnEntrar {
+        width: 25vw;               /* Aumenta a proporção da largura */
+        max-width: 150px;          /* Reduz limite máximo */
+        font-size: 0.85rem;        /* Diminui a fonte */
+        padding: 8px 14px;         /* Reduz espaçamento interno */
+    }
+}
+
+/* -------- Celulares médios (até 768px) -------- */
+@media (max-width: 768px) {
+
+    #heading div {
+        flex-wrap: nowrap;         /* Mantém logo e botão na mesma linha */
+        gap: 8px;                  /* Espaçamento entre os elementos */
+    }
+
+    #heading .h1 {
+        font-size: 1rem;           /* Diminui título */
+    }
+
+    .btnEntrar {
+        width: 30vw;               /* Ajusta proporção do botão */
+        max-width: 120px;          /* Diminui tamanho máximo */
+        font-size: 0.8rem;         /* Diminui fonte */
+        padding: 6px 12px;         /* Diminui espaçamento interno */
+    }
+
+    label {
+        font-size: 0.9rem;         /* Texto menor */
+        padding: 10px 18px;        /* Reduz padding */
+    }
+}
+
+/* -------- Celulares pequenos (até 480px) -------- */
+@media (max-width: 480px) {
+
+    #heading div {
+        flex-wrap: nowrap;         /* Mantém em linha */
+        justify-content: space-between; /* Distribui logo e botão nas pontas */
+    }
+
+    .btnEntrar {
+        width: 35vw;               /* Botão proporcionalmente mais largo */
+        max-width: 100px;          /* Limita tamanho máximo */
+        font-size: 0.75rem;        /* Fonte menor */
+        padding: 5px 10px;         /* Menos espaço interno */
+    }
+
+    .h1 {
+        font-size: 0.9rem;         /* Título ainda menor */
+    }
+}
